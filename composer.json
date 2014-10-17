@@ -1,0 +1,27 @@
+{
+    "name": "mynameiszanders/mailmerge",
+    "description": "A PHP library for document mail merges with template providers, transformers, placeholder collections, and parser/generator engines.",
+    "keywords": ["mail", "merge", "document", "generator", "placeholder"],
+    "type": "library",
+    "homepage": "https://github.com/mynameiszanders/mailmerge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zander Baldwin",
+            "email": "mynameiszanders@gmail.com",
+            "homepage": "http://zanderbaldwin.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
+    },
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MailMerge\\": "src/"
+        }
+    },
+}
