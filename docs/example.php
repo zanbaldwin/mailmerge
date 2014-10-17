@@ -54,9 +54,9 @@
     // Create the document manager.
     $manager = new DocumentManager(
         ProviderStackInterface      $providers,
-        TransformerStackInterface   $transformers,
         RendererEngineInterface     $renderer,
-        DoctrineCacheProvider       null
+        TransformerStackInterface   $transformers = null,
+        DoctrineCacheProvider       $cache = null
     );
 
     // Defining Placeholders:
