@@ -6,9 +6,8 @@
     use MailMerge\Render\EngineInterface as RenderEngineInterface;
     use MailMerge\Transformer\TransformerInterface;
     use Doctrine\Common\Cache\Cache as DoctrineCacheInterface;
-    use MailMerge\Render\Generator\GeneratorInterface;
     use MailMerge\Render\Parser\ParserInterface;
-    use MailMerge\Render\Placeholder\CollectionInterface as PlaceholderCollectionInterface;
+    use MailMerge\Render\Generator\GeneratorInterface;
 
     interface ManagerInterface
     {
@@ -31,24 +30,6 @@
         );
 
         /**
-         * Set: Placeholder Collection Callback
-         *
-         * @access public
-         * @param Closure $callback
-         * @return self
-         */
-        public function setPlaceholderCallback(\Closure $callback);
-
-        /**
-         * Set: Persistant Placeholder Collection
-         *
-         * @access public
-         * @param MailMerge\Render\Placeholder\CollectionInterface $placeholders
-         * @return self
-         */
-        public function setPersistantPlaceholders(PlaceholderCollectionInterface $placeholders);
-
-        /**
          * Add: Document Template Provider
          *
          * @access public
@@ -56,15 +37,6 @@
          * @return self
          */
         public function addProvider(ProviderInterface $provider);
-
-        /**
-         * Add: Transformer
-         *
-         * @access public
-         * @param MailMerge\Transformer\TransformerInterface $transformer
-         * @return self
-         */
-        public function addTransformer(TransformerInterface $transformer);
 
         /**
          * Set: Render Engine
@@ -76,6 +48,15 @@
         public function setRenderer(RenderEngineInterface $renderer);
 
         /**
+         * Set: Template Parser
+         *
+         * @access public
+         * @param MailMerge\Render\Parser\ParserInterface $parser
+         * @return self
+         */
+        public function setParser(ParserInterface $parser);
+
+        /**
          * Add: Document Generator
          *
          * @access public
@@ -85,12 +66,12 @@
         public function addGenerator(GeneratorInterface $generator);
 
         /**
-         * Set: Template Parser
+         * Add: Transformer
          *
          * @access public
-         * @param MailMerge\Render\Parser\ParserInterface $parser
+         * @param MailMerge\Transformer\TransformerInterface $transformer
          * @return self
          */
-        public function setParser(ParserInterface $parser);
+        public function addTransformer(TransformerInterface $transformer);
 
     }
