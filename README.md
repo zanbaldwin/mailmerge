@@ -72,5 +72,5 @@ Running Tests
 Run [PHPUnit](https://phpunit.de/ "Programmer-oriented testing framework for PHP.") from the project's root directory.
 
 ```bash
-$ php phpunit.phar
+$ php ./vendor/bin/phpunit
 ```
