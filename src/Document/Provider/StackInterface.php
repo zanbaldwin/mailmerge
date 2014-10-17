@@ -4,4 +4,7 @@
 
     interface StackInterface extends ProviderInterface
     {
+
+        public function push(ProviderInterface $provider);
+
     }
