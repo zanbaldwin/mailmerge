@@ -45,7 +45,7 @@
     // document to use as an email.
     $renderer = new RenderEngine(
         new ExpressionLanguageParser,
-        (new RenderFormatChain)
+        (new GeneratorStack)
             -> push(new WkhtmlPdfGenerator('path/to/wkhtmltopdf'))
             -> push(new EmailGenerator)
     );

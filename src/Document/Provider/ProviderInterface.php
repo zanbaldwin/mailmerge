@@ -4,4 +4,7 @@
 
     interface ProviderInterface
     {
+
+        public function getTemplateList(array $availablePlaceholders = null);
+
     }
