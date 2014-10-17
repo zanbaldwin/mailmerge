@@ -60,6 +60,12 @@ Or adding it manually to your `composer.json` file:
 }
 ```
 
+Alternatively, clone the repository directly:
+
+```bash
+git clone git://github.com/mynameiszanders/mailmerge.git ./vendor/mynameiszanders/mailmerge
+```
+
 Quick Start
 -----------
 
