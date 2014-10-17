@@ -19,6 +19,9 @@
         "preferred-install": "dist"
     },
     "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-4": {
             "MailMerge\\": "src/"
