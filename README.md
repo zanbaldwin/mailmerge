@@ -38,16 +38,21 @@ Only PHP versions 5.4 and above are supported.
 Installation
 ------------
 
-The recommended installation method is through [Composer](https://getcomposer.org), a dependency management library for PHP. If you have [cURL](http://curl.haxx.se) and [PHP](http://php.net/) installed, getting Composer is as easy as:
+The recommended installation method is through [Composer](https://getcomposer.org), a dependency management library for PHP.
+
+### Composer
+
+If you have [cURL](http://curl.haxx.se) and [PHP](http://php.net/) installed, getting Composer is as easy as:
 
 ```bash
 curl -s https://getcomposer.org/installer | php
 ```
 
-Next, require [`mynameiszanders/mailmerge`](https://packagist.org/mynameiszanders/mailmerge) as a dependency of your project by running:
+Add the [`mynameiszanders/mailmerge`](https://packagist.org/mynameiszanders/mailmerge) as a dependency of your project
+by running:
 
 ```bash
-php composer.phar require mynameiszanders/mailmerge:*
+php composer.phar require mynameiszanders/mailmerge
 ```
 
 Or adding it manually to your `composer.json` file:
@@ -55,15 +60,20 @@ Or adding it manually to your `composer.json` file:
 ```json
 {
     "require": {
-        "mynameiszanders/mailmerge": "*"
+        "mynameiszanders/mailmerge": "dev-develop"
     }
 }
 ```
 
-Alternatively, clone the repository directly:
+### Cloning
 
-```bash
-git clone git://github.com/mynameiszanders/mailmerge.git ./vendor/mynameiszanders/mailmerge
+Alternatively, clone the repository directly with `git clone git://github.com/mynameiszanders/mailmerge.git`, and
+include the basic autoloader in your application.
+
+```php
+<?php
+
+    require_once __DIR__ . '/mailmerge/MailMerge.php';
 ```
 
 Quick Start
