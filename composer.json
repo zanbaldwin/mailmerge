@@ -21,6 +21,7 @@
     "require": {},
     "require-dev": {
         "phpunit/phpunit": "*",
+        "phpunit/php-invoker": "~1.1",
         "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
