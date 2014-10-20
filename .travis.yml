@@ -1,0 +1,22 @@
+language: php
+
+php:
+    - 5.4
+    - 5.5
+    - 5.6
+    - hhvm
+    - hhvm-nightly
+
+before_script:
+    - composer install --prefer-source --dev
+
+script:
+    - ./vendor/bin/phpunit -v --coverage-clover ./build/logs/clover.xml
+
+after_script:
+    - php vendor/bin/coveralls -v
+
+matrix:
+    allow_failures:
+        # HHVM-nightly currently chokes on composer installation, thanks to Doctrine Project for this info.
+        - php: hhvm-nightly
