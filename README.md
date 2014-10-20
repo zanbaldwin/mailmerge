@@ -88,5 +88,18 @@ Running Tests
 Run [PHPUnit](https://phpunit.de/ "Programmer-oriented testing framework for PHP.") from the project's root directory.
 
 ```bash
-$ php ./vendor/bin/phpunit
+php ./vendor/bin/phpunit
 ```
+
+Contributing
+------------
+
+To contribute to this project, all bug reports, feature requests or patches (pull requests) must be done through the
+[GitHub repository page](https://github.com/mynameiszanders/mailmerge). Please see the [CONTRIBUTING](CONTRIBUTING.md)
+file for more details.
+
+License
+-------
+
+MailMerge is licensed under the [MIT/X11](http://j.mp/mit-license) license, see the accompanying [LICENSE](LICENSE.md)
+file for the full license.
