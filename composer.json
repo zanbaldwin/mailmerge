@@ -1,9 +1,9 @@
 {
-    "name": "mynameiszanders/mailmerge",
+    "name": "zanderbaldwin/mailmerge",
     "description": "A PHP library for document mail merges with template providers, transformers, placeholder collections, and parser/generator engines.",
-    "keywords": ["mail", "merge", "document", "generator", "placeholder"],
+    "keywords": ["mail", "merge", "document", "parser", "generator", "placeholder"],
     "type": "library",
-    "homepage": "https://github.com/mynameiszanders/mailmerge",
+    "homepage": "https://github.com/zanderbaldwin/mailmerge",
     "license": "MIT",
     "authors": [
         {
@@ -24,9 +24,14 @@
         "phpunit/php-invoker": "~1.1",
         "satooshi/php-coveralls": "dev-master"
     },
+    "suggests": {
+        "twig/twig": "MailMerge provides the integration with the Twig engine for parsing templates",
+        "symfony/expression-language": "MailMerge provides the integration with Symfony's Expression Language for parsing templates"
+    },
     "autoload": {
         "psr-4": {
-            "MailMerge\\": "src/"
+            "MailMerge\\": "src/",
+            "MailMerge\\Lib\\": "lib/"
         },
         "psr-0": {
             "MailMerge": "src/"

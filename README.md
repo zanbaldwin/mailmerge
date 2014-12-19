@@ -48,11 +48,11 @@ If you have [cURL](http://curl.haxx.se) and [PHP](http://php.net/) installed, ge
 curl -s https://getcomposer.org/installer | php
 ```
 
-Add the [`mynameiszanders/mailmerge`](https://packagist.org/mynameiszanders/mailmerge) as a dependency of your project
+Add the [`zanderbaldwin/mailmerge`](https://packagist.org/zanderbaldwin/mailmerge) as a dependency of your project
 by running:
 
 ```bash
-php composer.phar require mynameiszanders/mailmerge
+php composer.phar require zanderbaldwin/mailmerge
 ```
 
 Or adding it manually to your `composer.json` file:
@@ -60,14 +60,14 @@ Or adding it manually to your `composer.json` file:
 ```json
 {
     "require": {
-        "mynameiszanders/mailmerge": "dev-develop"
+        "zanderbaldwin/mailmerge": "dev-develop"
     }
 }
 ```
 
 ### Cloning
 
-Alternatively, clone the repository directly with `git clone git://github.com/mynameiszanders/mailmerge.git`, and
+Alternatively, clone the repository directly with `git clone git://github.com/zanderbaldwin/mailmerge.git`, and
 include the basic autoloader in your application.
 
 ```php
@@ -95,7 +95,7 @@ Contributing
 ------------
 
 To contribute to this project, all bug reports, feature requests or patches (pull requests) must be done through the
-[GitHub repository page](https://github.com/mynameiszanders/mailmerge). Please see the [CONTRIBUTING](CONTRIBUTING.md)
+[GitHub repository page](https://github.com/zanderbaldwin/mailmerge). Please see the [CONTRIBUTING](CONTRIBUTING.md)
 file for more details.
 
 License
