@@ -12,7 +12,7 @@
     use MailMerge\Transformer\TransformerInterface;
     use MailMerge\Render\Placeholder\CollectionInterface as PlaceholderCollectionInterface;
 
-    class Managaer implements ManagerInterface
+    class Manager implements ManagerInterface
     {
 
         /**
