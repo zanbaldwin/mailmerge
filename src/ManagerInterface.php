@@ -1,77 +1,49 @@
 <?php
 
-    namespace MailMerge;
+namespace MailMerge;
 
-    use MailMerge\Document\Provider\ProviderInterface;
-    use MailMerge\Render\EngineInterface as RenderEngineInterface;
-    use MailMerge\Transformer\TransformerInterface;
-    use Doctrine\Common\Cache\Cache as DoctrineCacheInterface;
-    use MailMerge\Render\Parser\ParserInterface;
-    use MailMerge\Render\Generator\GeneratorInterface;
+use MailMerge\Provider\ProviderInterface;
+use MailMerge\Render\EngineInterface;
+use MailMerge\Transformer\TransformerInterface;
+use Doctrine\Common\Cache\Cache as DoctrineCacheInterface;
 
-    interface ManagerInterface
-    {
+interface ManagerInterface
+{
 
-        /**
-         * Constructor
-         *
-         * @access public
-         * @param MailMerge\Document\Provider\ProviderInterface $providers
-         * @param MailMerge\Render\EngineInterface $renderer
-         * @param MailMerge\Transformer\TransformerInterface $transformers
-         * @param Doctrine\Common\Cache\Cache $cache
-         * @return void
-         */
-        public function __construct(
-            ProviderInterface $providers,
-            RenderEngineInterface $renderer,
-            TransformerInterface $transformers = null,
-            DoctrineCacheInterface $cache = null
-        );
+    /**
+     * Set Providers
+     *
+     * @access public
+     * @param MailMerge\Template\ProviderInterface $providers
+     * @return void
+     */
+    public function setProviders(ProviderInterface $providers);
 
-        /**
-         * Add: Document Template Provider
-         *
-         * @access public
-         * @param MailMerge\Document\Provider\ProviderInterface $provider
-         * @return self
-         */
-        public function addProvider(ProviderInterface $provider);
+    /**
+     * Set Render Engine
+     *
+     * @access public
+     * @param MailMerge\Render\EngineInterface $renderer
+     * @return void
+     */
+    public function setRenderer(EngineInterface $renderer);
 
-        /**
-         * Set: Render Engine
-         *
-         * @access public
-         * @param MailMerge\Render\EngineInterface $renderer
-         * @return self
-         */
-        public function setRenderer(RenderEngineInterface $renderer);
+    /**
+     * Set Transformers
+     *
+     * @access public
+     * @param MailMerge\Transformer\StackInterface $transformers
+     * @return void
+     */
+    public function setTransformers(TransformerInterface $transformers);
 
-        /**
-         * Set: Template Parser
-         *
-         * @access public
-         * @param MailMerge\Render\Parser\ParserInterface $parser
-         * @return self
-         */
-        public function setParser(ParserInterface $parser);
+    /**
+     * Set Cache
+     *
+     * @access public
+     * @param Doctrine\Common\Cache $cache
+     * @return void
+     */
+    public function setCache(DoctrineCacheInterface $cache);
 
-        /**
-         * Add: Document Generator
-         *
-         * @access public
-         * @param MailMerge\Render\Generator\GeneratorInterface $generator
-         * @return self
-         */
-        public function addGenerator(GeneratorInterface $generator);
-
-        /**
-         * Add: Transformer
-         *
-         * @access public
-         * @param MailMerge\Transformer\TransformerInterface $transformer
-         * @return self
-         */
-        public function addTransformer(TransformerInterface $transformer);
-
-    }
+}
