@@ -31,10 +31,6 @@
     "autoload": {
         "psr-4": {
             "MailMerge\\": "src/",
-            "MailMerge\\Lib\\": "lib/"
-        },
-        "psr-0": {
-            "MailMerge": "src/"
         }
     }
 }
